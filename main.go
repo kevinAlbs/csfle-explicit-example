@@ -187,7 +187,15 @@ func main() {
 
 	{
 		fmt.Printf("Automatic decryption begin...\n")
-		res := encryptedColl.FindOne(context.TODO(), bson.D{})
+
+		filter := bson.D{{"encryptedInt", bson.D{{"$lte", 123 }}}}
+		res := encryptedColl.FindOne(context.TODO(), filter)
+
+//		filter := bson.D{{"rating", bson.D{{"$lt", 7}}}}
+//		cursor, err := coll.Find(context.TODO(), filter)
+//		db.inventory.find( { quantity: { $gte: 20 } } )
+//		res := encryptedColl.FindOne(context.TODO(), bson.D{})
+
 		if res.Err() != nil {
 			log.Panicf("FindOne error: %v\n", res.Err())
 		}
