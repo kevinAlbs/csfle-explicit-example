@@ -4,7 +4,7 @@ An example using FLE2 Range Support for explicit encryption/decryption and autom
 
 At time of writing, this requires an unreleased branch of the Go driver and an unstable release of libmongocrypt.
 
-First, make sure Brew had been updated & upgraded, which will bring along any required XCode updates as well
+First, make sure Brew had been updated & upgraded, which will bring along any required XCode updates as well.
 
 Then, clone the branch with FLE2 Range Support:
 
@@ -12,13 +12,13 @@ Then, clone the branch with FLE2 Range Support:
 git clone git@github.com:kevinAlbs/mongo-go-driver.git --branch DRIVERS-2505 mongo-go-driver-DRIVERS-2505
 ```
 
-Update go.mod (for this csfle example repo) and replace the path in the `replace` directive at the bottom of the file to reflect the local checked-out go driver path:
+Update go.mod (for this csfle example repo) and change the path in the `replace` directive at the bottom of the file with the local checked-out go driver path. Something like this:
 ```
 // Use local checkout of Go driver to get. TODO: replace this path.
 replace go.mongodb.org/mongo-driver => /Users/kevin.albertson/code/csfle-explicit-example/mongo-go-driver-DRIVERS-2505
 ```
 
-Download and install the latest libmongocrypt 1.7.0-alpha1:
+Download and install the latest libmongocrypt 1.7.0-alpha1. Might need to uninstall first (`brew uninstall --force libmongocrypt`).
 
 ```
 brew install --HEAD libmongocrypt
