@@ -28,6 +28,11 @@ pkg-config --modversion libmongocrypt
 # Expect to see "1.7.0-pre" printed
 ```
 
+May require explicitly forcing go to read the go.mod
+```
+export GO111MODULE=auto
+```
+
 Start a MongoDB server locally on port 27017.
 
 Run the example with:
