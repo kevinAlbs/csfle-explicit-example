@@ -2,7 +2,7 @@ module kevinalbs.com/go-bootstrap
 
 go 1.17
 
-require go.mongodb.org/mongo-driver v1.11.1
+require go.mongodb.org/mongo-driver v1.12.0-alpha1
 
 require (
 	github.com/golang/snappy v0.0.1 // indirect
@@ -16,6 +16,3 @@ require (
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
 	golang.org/x/text v0.3.7 // indirect
 )
-
-// Use local checkout of Go driver to get. TODO: replace this path.
-replace go.mongodb.org/mongo-driver => /Users/kevin.albertson/code/csfle-explicit-example/mongo-go-driver-DRIVERS-2505
