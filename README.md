@@ -54,4 +54,3 @@ Document is stored in database as: {"_id": {"$oid":"63da9953d3231298f54b1efa"},"
 Get without decryption ... end
 ```
 
-Note, this uses an unstable release of libmongocrypt. Consider uninstalling after with `brew uninstall libmongocrypt`.
